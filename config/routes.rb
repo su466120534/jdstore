@@ -42,6 +42,6 @@ Rails.application.routes.draw do
   end
 
 
-root 'products#index'
+root 'welcome#index'
 
 end
