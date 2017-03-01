@@ -13,5 +13,9 @@ module Jdstore
     # -- all .rb files in that directory are automatically loaded.
   end
 end
-
-config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
+# Adding Webfonts to the Asset Pipeline
+config.assets.precompile << Proc.new { |path|
+  if path =~ /\.(eot|svg|ttf|woff)\z/
+    true
+  end
+}
