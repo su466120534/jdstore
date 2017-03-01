@@ -108,7 +108,8 @@ img {
   background: #ffffff;
   z-index: 100; }
   .lt-ie9 .page {
-    min-width: 1200px; }
+    min-width: 1200px;
+   }
   @media (min-width: 1200px) {
     .page:before {
       content: "";
