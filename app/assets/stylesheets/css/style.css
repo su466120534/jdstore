@@ -370,9 +370,9 @@ img {
   text-align: left; }
   .btn-with-icon:before {
     position: absolute;
-    top: 0;
+    top: -5px;
     bottom: 0;
-    left: 20px;
+    left: 10px;
     font-size: 24px;
     line-height: 40px;
     color: inherit; }
