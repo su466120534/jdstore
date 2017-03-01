@@ -137,6 +137,7 @@ input[type='number'] {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+
 }
 .container-fluid:before, .container-fluid:after {
   display: table;
@@ -150,6 +151,7 @@ input[type='number'] {
 .row {
   margin-left: -15px;
   margin-right: -15px;
+  margin-top: 300px;
 }
 .row:before, .row:after {
   display: table;
