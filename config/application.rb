@@ -14,5 +14,3 @@ module Jdstore
   end
 end
 # Adding Webfonts to the Asset Pipeline
-
-config.assets.paths << "#{Rails.root}/public/videos"
