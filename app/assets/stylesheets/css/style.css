@@ -267,20 +267,20 @@ img {
     background-attachment: fixed; }
 
 .bg-image-1 {
-  background-image: url(../images/page-1_bg01.jpg);
+  background-image: url(https://ww1.sinaimg.cn/large/006tKfTcgy1fd6cpri7q8j30xc0iydl5.jpg);
   background-position: top left; }
 
 .bg-image-2 {
-  background-image: url(../images/page-1_bg02.jpg); }
+  background-image: url(https://ww1.sinaimg.cn/large/006tKfTcgy1fd71p5g41gj31kw0w0u12.jpg); }
   @media (min-width: 1200px) {
     .bg-image-2 h1, .bg-image-2 h2, .bg-image-2 h3, .bg-image-2 h4, .bg-image-2 h5, .bg-image-2 h6, .bg-image-2 p {
       color: #FFFFFF; } }
 
 .bg-image-3 {
-  background-image: url(../images/page-1_bg03.jpg); }
+  background-image: url(https://ww4.sinaimg.cn/large/006tNc79gy1fd6ac1kf63j30zk0k00w3.jpg); }
 
 .bg-image-4 {
-  background-image: url(../images/page-1_bg04.jpg); }
+  background-image: url(https://ww3.sinaimg.cn/large/006tKfTcgy1fd71i481azj31hc0u0jy0.jpg); }
 
 .bg-image--skin-1 {
   position: relative;
