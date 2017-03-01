@@ -10,7 +10,9 @@
 
   <body>
     <div class="container-fluid">
-      <%= render "common/navbar" %>
+      <% if !current_page?(root_path) %>
+        <%= render "common/navbar" %>
+      <% end %>
       <!-- <%= render "common/flashes"%> -->
       <%= yield %>
     </div>
