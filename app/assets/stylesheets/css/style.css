@@ -322,7 +322,7 @@ img {
     margin-top: -2px;
     left: 0;
     top: 0;
-    content: url(../images/temp-logo.png);
+    content: "\e3a5";
     font-family: "Material Icons";
     font-weight: 400;
     font-size: 40px;
@@ -371,9 +371,9 @@ img {
   text-align: left; }
   .btn-with-icon:before {
     position: absolute;
-    top: -5px;
+    top: 0;
     bottom: 0;
-    left: 10px;
+    left: 20px;
     font-size: 24px;
     line-height: 40px;
     color: inherit; }
