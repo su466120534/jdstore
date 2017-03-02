@@ -16,3 +16,20 @@
 //= require bootstrap/alert
 //= require bootstrap/dropdown
 //= require_tree .
+
+//= require device.min
+//= require html5shiv
+//= require jquery-migrate-1.2.1
+//= require jquery.cookie
+//= require jquery.easing.1.3
+//= require jquery.equalheights
+//= require jquery
+//= require jquery.mobile.customized.min
+//= require jquery.rd-parallax
+//= require jquery.ui.totop
+//= require jquery.vide
+//= require owl.carousel.min
+//= require pointer-events
+//= require script
+//= require scrollTo
+//= require wow
