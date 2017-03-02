@@ -322,7 +322,7 @@ img {
     margin-top: -2px;
     left: 0;
     top: 0;
-    content: "\e3a5";
+    content: "";
     font-family: "Material Icons";
     font-weight: 400;
     font-size: 40px;
@@ -1364,7 +1364,8 @@ header {
   min-height: 20px;
   text-align: center;
   z-index: 120;
-  background: #191919; }
+
+   }
   @media (min-width: 768px) {
     header {
       padding-left: 22px; } }
