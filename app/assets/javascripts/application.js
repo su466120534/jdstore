@@ -23,7 +23,7 @@
 //= require jquery.cookie
 //= require jquery.easing.1.3
 //= require jquery.equalheights
-//= require jquery
+
 //= require jquery.mobile.customized.min
 //= require jquery.rd-parallax
 //= require jquery.ui.totop

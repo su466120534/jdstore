@@ -41,7 +41,9 @@ gem 'aasm'
 gem 'figaro'
 gem 'fog'
 gem 'airbrake', '~> 5.4'
-gem 'fontello_rails_converter', github: 'railslove/fontello_rails_converter' 
+gem 'fontello_rails_converter', github: 'railslove/fontello_rails_converter'
+gem 'jquery-rails'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

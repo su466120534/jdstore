@@ -18,11 +18,16 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "css/style";
-
+ @import "css/owl-carousel";
  @import "font-awesome";
 
 
 
 
- @import "css/owl-carousel";
- @import "css/google-map";
+ .container-fluid-2 {
+   margin-right: auto;
+   margin-left: auto;
+   padding-left: 15px;
+   padding-right: 0px;
+
+ }
