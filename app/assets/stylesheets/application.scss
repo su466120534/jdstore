@@ -14,9 +14,11 @@
  *= require_self
  */
 
- @import "css/grid";
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import "css/grid";
+
+
  @import "css/style";
  @import "css/owl-carousel";
  @import "font-awesome";
