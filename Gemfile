@@ -42,7 +42,7 @@ gem 'figaro'
 gem 'fog'
 gem 'airbrake', '~> 5.4'
 gem 'fontello_rails_converter', github: 'railslove/fontello_rails_converter'
-gem 'jquery-rails'
+
 
 
 group :development, :test do

@@ -12,20 +12,23 @@
  *
  *= require_tree .
  *= require_self
+
  */
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
  @import "css/grid";
-
-
+ @import "navbar-cart";
  @import "css/style";
  @import "css/owl-carousel";
+
  @import "font-awesome";
 
 
 
 
+//应用于全局application.html.erb
  .container-fluid-2 {
    margin-right: auto;
    margin-left: auto;

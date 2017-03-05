@@ -17,6 +17,7 @@
 //= require bootstrap/dropdown
 //= require_tree .
 
+
 //= require device.min
 //= require html5shiv
 //= require jquery-migrate-1.2.1
@@ -33,3 +34,4 @@
 //= require script
 //= require scrollTo
 //= require wow
+//= require navbar-cart

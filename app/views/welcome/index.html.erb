@@ -1,36 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Home</title>
-    <meta charset="utf-8"/>
-    <meta name="format-detection" content="telephone=no"/>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="assets/stylesheets/css/grid.css"/>
-    <link rel="stylesheet" href="assets/stylesheets/css/style.css"/>
-    <link rel="stylesheet" href="assets/stylesheets/css/owl-carousel.css"/>
-    <script src="assets/javascripts/jquery.js"></script>
-    <script src="assets/javascripts/jquery-migrate-1.2.1.js"></script>
-    <!--[if lt IE 9]>
-    <html class="lt-ie9">
-    <div style="clear: both; text-align:center; position: relative;"><a
-            href="http://windows.microsoft.com/en-US/internet-explorer/.."><img
-            src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820"
-            alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/></a>
-    </div>
-    </html>
-    <script src="js/html5shiv.js"></script><![endif]-->
-    <script src="assets/device.min.js"></script>
-</head>
+
+<link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+<link rel="stylesheet" href="assets/css/grid.css"/>
+<link rel="stylesheet" href="assets/css/style.css"/>
+<link rel="stylesheet" href="assets/stylesheet/css/owl-carousel.css"/>
+<link rel="stylesheet" href="assets/stylesheet/navbar-cart.css"/>
+<script src="assets/javascripts/jquery.js"></script>
+<script src="assets/javascripts/jquery-migrate-1.2.1.js"></script>
+<script src="assets/javascripts/navbar-cart.js"></script>
+
+<!--[if lt IE 9]>
+<html class="lt-ie9">
+<div style="clear: both; text-align:center; position: relative;"><a
+        href="http://windows.microsoft.com/en-US/internet-explorer/.."><img
+        src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820"
+        alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/></a>
+</div>
+</html>
+<script src="js/html5shiv.js"></script><![endif]-->
+ <script src="assets/javascripts/device.min.js"></script>
+
+ <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+ <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
 <body>
 <div class="page">
     <header>
         <h1 class="brand"><a href="/#welcome">Otentik <span class="text-primary">Sunshade</span></a></h1>
-        
-        <ul class="inline-list">
-            <li><a href="http://sujiang.logdown.com/" class="icon icon-xs fa-facebook"></a></li>
-            <li><a href="http://sujiang.logdown.com/" class="icon icon-xs fa-twitter"></a></li>
-            <li><a href="http://sujiang.logdown.com/" class="icon icon-xs fa-google-plus"></a></li>
-        </ul>
+        <div class="container">
+
+
+            <ul class="navbar-right">
+              <li><a href="#" id="cart-2"><i class="material-icons-local_grocery_store"></i>Cart <span class="badge"> <%= current_cart.products.count %> </span></a></li>
+            </ul> <!--end navbar-right -->
+          </div> <!--end container -->
+
+        <div class="container">
+          <div class="shopping-cart">
+            <div class="shopping-cart-header">
+              <i class="material-icons-local_grocery_store"></i><span class="badge"> <%= current_cart.products.count %> </span>
+              <div class="shopping-cart-total">
+                <span class="lighter-text">Total:</span>
+                <span class="main-color-text">$ <%= render_cart_total_price(current_cart) %> </span>
+              </div>
+            </div> <!--end shopping-cart-header -->
+
+            <ul class="shopping-cart-items">
+
+          <% current_cart.cart_items.each do |cart_item| %>
+              <li class="clearfix">
+<%= image_tag(cart_item.product.image.thumb.url, class: "small-cart-image") %>
+
+
+
+                <span class="item-name"><%= link_to(cart_item.product.title, product_path(cart_item.product)) %></span>
+                <span class="item-price">$ <%= cart_item.product.price %></span>
+                <span class="item-quantity">Quantity: <%= cart_item.quantity %></span>
+              </li>
+
+          <% end %>
+            </ul>
+
+            <a href="#" class="btn btn-md btn-primary">Checkout</a>
+          </div> <!--end shopping-cart -->
+        </div> <!--end container -->
+
+
         <nav class="nav">
             <ul class="sf-menu" data-type="navbar">
                 <li class="active">
@@ -54,6 +90,9 @@
                 <li><a href="#contacts"></a></li>
             </ul>
         </nav>
+
+
+
     </header>
     <!--
     ========================================================
@@ -62,7 +101,18 @@
     -->
     <main class="main">
 
-      <section id="home" class="well-2 z-index bg-image-1 bg-image--skin-1 flex flex-center relative text-center text-lg-left">
+      <section id="home" class="text-center text-white flex flex-center
+        <div class="container-fluid well-2  max-width-xl" vide" data-vide-bg="video/video-bg01">
+                  <h1 class="text-white">Description with video</h1>
+                  <div class="row offset-1">
+                      <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 ">
+                          <p> </p>
+                      </div>
+                  </div>
+              </div>
+      </section>
+
+      <section id="about" class="well-2 z-index bg-image-1 bg-image--skin-1 flex flex-center relative text-center text-lg-left">
           <div class="container-fluid" style="top: 200px;">
               <div class="row ">
                   <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-4 col-lg-offset-1 max-width-xl">
@@ -76,7 +126,7 @@
       </section>
 
 
-        <section id="about" class=" bg-image-2 z-index bg-image--skin-1 flex flex-center text-center text-lg-left">
+        <section id="features" class=" bg-image-2 z-index bg-image--skin-1 flex flex-center text-center text-lg-left">
             <div class="container-fluid">
                 <div class="row well-2">
                     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-4 col-lg-offset-7 max-width-xl">
@@ -88,7 +138,7 @@
                 </div>
             </div>
         </section>
-        <section id="features" class="well-2 bg-image-3 z-index bg-image--skin-1 flex flex-center text-center text-lg-left">
+        <section id="description" class="well-2 bg-image-3 z-index bg-image--skin-1 flex flex-center text-center text-lg-left">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-5 col-lg-offset-1">
@@ -130,7 +180,7 @@ the damaging effects of ultraviolet rays.</p>
 
 
 
-        <section id="description" class="well-2 z-index bg-image-4 bg-image--skin-1 flex flex-center text-center text-lg-left">
+        <section id="product" class="well-2 z-index bg-image-4 bg-image--skin-1 flex flex-center text-center text-lg-left">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-4 col-lg-offset-7">
@@ -167,16 +217,7 @@ the damaging effects of ultraviolet rays.</p>
             </div>
         </section>
 
-        <section id="product" class="text-center text-white flex flex-center
-          <div class="container-fluid well-2  max-width-xl" vide" data-vide-bg="video/video-bg01">
-                    <h1 class="text-white">Description with video</h1>
-                    <div class="row offset-1">
-                        <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 ">
-                            <p> </p>
-                        </div>
-                    </div>
-                </div>
-        </section>
+
 
 
         <section id="testimonials" class="text-center relative bg-primary">
