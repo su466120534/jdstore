@@ -1,14 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
-<link rel="stylesheet" href="assets/css/grid.css"/>
-<link rel="stylesheet" href="assets/css/style.css"/>
-<link rel="stylesheet" href="assets/stylesheet/css/owl-carousel.css"/>
-<link rel="stylesheet" href="assets/stylesheet/navbar-cart.css"/>
-<script src="assets/javascripts/jquery.js"></script>
-<script src="assets/javascripts/jquery-migrate-1.2.1.js"></script>
-<script src="assets/javascripts/navbar-cart.js"></script>
+
+
 
 <!--[if lt IE 9]>
 <html class="lt-ie9">
@@ -19,10 +13,7 @@
 </div>
 </html>
 <script src="js/html5shiv.js"></script><![endif]-->
- <script src="assets/javascripts/device.min.js"></script>
 
- <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
- <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
 <body>
 <div class="page">
@@ -77,9 +68,11 @@
                              </div>
 
                            </div><!-- .cart-subtotal -->
-                           <div class="cart-button">
-                            <a href="#" class="btn btn-md btn-primary">Checkout</a>
-                          </div>
+                           <div class="checkout clearfix">
+                             <%= link_to("Check Out", checkout_carts_path, method: :post, class: "btn btn-md btn-primary cart-button") %>
+                           </div>
+
+
 
                            </ul>
                          </li>
