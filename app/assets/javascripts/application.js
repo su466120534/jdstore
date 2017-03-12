@@ -34,4 +34,3 @@
 //= require script
 //= require scrollTo
 //= require wow
-//= require navbar-cart

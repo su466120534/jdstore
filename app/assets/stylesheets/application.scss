@@ -18,8 +18,7 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
- @import "css/grid";
- @import "navbar-cart";
+
  @import "css/style";
  @import "css/owl-carousel";
 
@@ -35,4 +34,139 @@
    padding-left: 15px;
    padding-right: 0px;
 
+ }
+
+
+ /*--------------------------------------------------
+     [Cart dropdown items]
+ ----------------------------------------------------*/
+
+ .cart-dropdown {
+   display: none;
+   position: absolute;
+   width: 270px;
+   right: 0;
+   top: 100%;
+   list-style: none;
+   margin: 0;
+   margin-top: -14px;
+   padding: 25px 20px;
+   text-align: left;
+   background-color: #ffffff;
+   border: 1px solid #ededed;
+   cursor: default;
+ }
+
+ .dropdown-menu .cart-item {
+   position: relative;
+   display: table;
+   width: 100%;
+   padding: 0 0 15px 0;
+   border-bottom: 1px solid #ededed;
+   margin-bottom: 15px;
+ }
+
+ .dropdown-menu .cart-item .item-thumb,
+ .dropdown-menu .cart-item .item-details {
+   display: table-cell;
+   vertical-align: top;
+ }
+
+ .dropdown-menu .cart-item .item-thumb {
+   width: 80px;
+   padding-right: 15px;
+ }
+
+ .dropdown-menu .cart-item .item-thumb > img {
+   width: 100%;
+ }
+
+ .dropdown-menu .cart-item .item-title {
+   font-size: 14px;
+   font-weight: normal;
+   padding-right: 20px;
+   margin-bottom: 6px;
+ }
+
+ .dropdown-menu .cart-item .item-title > a {
+   color: #606060;
+   text-decoration: none;
+ }
+
+ .dropdown-menu .cart-item .item-title > a:hover, .dropdown-menu .cart-item .item-title > a:focus {
+   color: #a6a6a6;
+   text-decoration: none;
+ }
+
+ .dropdown-menu .cart-item .item-price {
+   font-size: 14px;
+   color: #999;
+   margin-bottom: 0;
+ }
+
+ .dropdown-menu .cart-item .close-btn {
+   position: absolute;
+   top: -3px;
+   right: -4px;
+   font-size: 14px;
+ }
+
+ .dropdown-menu .cart-item .close-btn:hover {
+   color: #ef0568;
+ }
+
+ .dropdown .cart-subtotal {
+   display: table;
+   width: 100%;
+ }
+
+ .dropdown .cart-subtotal .column {
+   display: table-cell;
+   vertical-align: top;
+   width: 50%;
+ }
+
+ .dropdown .cart-subtotal span {
+   display: block;
+   font-size: 14px;
+   color: #999;
+ }
+
+ .dropdown .cart-subtotal .amount {
+   font-size: 14px;
+   color: #606060;
+   font-weight: 500;
+   text-align: right;
+ }
+
+
+ .dropdown-menu .sub-menu {
+    position: relative;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: Hind, sans-serif;
+    color: #777984;
+    text-transform: uppercase;
+    padding-left: 30px;
+    padding-top: 10px;
+    right: 0;
+   }
+
+   .count {
+     position: relative;;
+     display: block;
+     width: 14px;
+     height: 14px;
+     line-height: 14px;
+     font-size: 12px;
+     color: #fff;
+     text-align: center;
+     border-radius: 50%;
+     background-color: #77cde3;
+     top: -45px;
+     right: -17px;
+   }
+
+  .dropdown:hover .dropdown-menu {
+     display: block;
  }
